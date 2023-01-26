@@ -3,7 +3,7 @@ import "firebase/firestore";
 import "firebase/auth";
 import "firebase/storage";
 
-//STORED THE FIREBASE DETAILS IN .env.local FILE
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCYgRw1A3pUNODzkhVaQ9lyfUAgUZtvyrk",
