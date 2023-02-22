@@ -39,13 +39,13 @@ const AdminSignin = () => {
       return setEmailError("All fields are required!");
     }
 
-    
+    {
       admins.map((admin) => {
         if (admin.email === email) {
           auth
             .signInWithEmailAndPassword(email, password)
             .then(() => {
-              history.push("#");
+              history.push("/admin/dashboard");
             })
             .catch((err) => {
               switch (err.code) {
@@ -63,9 +63,8 @@ const AdminSignin = () => {
         } else {
           setEmailError("Email is not authenticated!");
         }
-        return null;
       });
-    
+    }
   };
 
   return (
