@@ -16,7 +16,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import GoogleIcon from "@mui/icons-material/Google";
 import firebase, { db, auth } from "../Firebase";
-import { box, signupGrid } from "./Styles";
+import { box, signupGrid } from "./styles";
 
 const theme = createTheme();
 
@@ -65,8 +65,8 @@ const LawyerSignup = () => {
         });
 
         // PUSHING Lawyer DATA IN DB
-        const LawyerRef = db.doc(`Lawyers/${user.uid}`);
-        LawyerRef.set({
+        const lawyerRef = db.doc(`lawyers/${user.uid}`);
+        lawyerRef.set({
           name,
           email,
           uid: user.uid,
@@ -118,8 +118,8 @@ const LawyerSignup = () => {
         });
 
         // PUSHING Lawyer DATA IN DB
-        const LawyerRef = db.doc(`Lawyers/${cred.user.uid}`);
-        LawyerRef.set({
+        const lawyerRef = db.doc(`lawyers/${cred.user.uid}`);
+        lawyerRef.set({
           name: cred.user.displayName,
           email: cred.user.email,
           uid: cred.user.uid,

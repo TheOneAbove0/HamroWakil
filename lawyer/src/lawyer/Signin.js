@@ -17,7 +17,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import GoogleIcon from "@mui/icons-material/Google";
 
 import firebase, { auth } from "../Firebase";
-import { box, signinGrid } from "./Styles";
+import { box, signinGrid } from "./styles";
 const theme = createTheme();
 const LawyerSignin = () => {
   const history = useHistory();
